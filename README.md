@@ -1,70 +1,112 @@
-<<<<<<< HEAD
-# SILOKER
-=======
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# 🌐 Web-based Job Vacancy Selection System for Officer
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Developing a *web-based job vacancy selection system* for users in the role of officers using *PHP (Laravel Framework)* and *MySQL database*. The system aims to help manage job vacancy data and assist in the selection process for job seekers in a more structured, efficient, and automated manner.
 
-## About Laravel
+---
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## 📑 Table of Contents
+1. [Project Overview](#project-overview)
+2. [Requirements Analysis](#requirements-analysis)
+   - [Problem Identification](#problem-identification)
+   - [System Objectives](#system-objectives)
+   - [Functional Requirements Specification](#functional-requirements-specification)
+3. [System Design](#system-design)
+4. [Implementation](#implementation)
+5. [Testing](#testing)
+6. [Tools & Libraries](#tools--libraries)
+   
+---
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## 📌 Project Overview
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+This project is a *web-based application* that allows officers to manage job vacancy data, perform the selection process for job seekers, and monitor the status of vacancies more systematically and efficiently. The system provides a user-friendly interface and ensures a smooth flow of the job application and selection process.
 
-## Learning Laravel
+---
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## 📊 Requirements Analysis
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+### 1️⃣ Problem Identification
+The process of managing and selecting job vacancies in companies is often still carried out manually or using simple, non-integrated systems. This leads to difficulties in monitoring job vacancies' status and tracking the selection process of job seekers. A web-based solution is required to streamline and automate these processes.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### 2️⃣ System Objectives
+The system's objectives are:
+- To enable officers to *add, **edit, and **delete* job vacancy data.
+- To *categorize job vacancies* based on their status:  
+  - *Active (1)* → Job can still be applied for, selection not yet started.  
+  - *Selection Process (2)* → Job no longer open for applications, selection process in progress.  
+  - *Closed (3)* → Job closed after selection is completed, no further applications accepted.
+- To *view job seekers* who have applied for each job vacancy.
+- To support *administrative selection* and *interview selection* processes.
+- To *automatically update job vacancy statuses* and the *closing date* when the selection process is completed.
 
-## Laravel Sponsors
+### 3️⃣ Functional Requirements Specification
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+#### 📌 Job Vacancy Data Management
+- *Add* new job vacancy data.
+- *Edit* existing job vacancy data.
+- *Delete* job vacancy data.
+- *View* job vacancies, categorized by their status:  
+  - Active, Selection Process, Closed.
 
-### Premium Partners
+#### 📌 View Job Vacancy Details
+- *Display detailed job vacancy* information.
+- *View job seekers* who have applied for the vacancy.
+- *Track the selection progress* for each applicant.
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+#### 📌 Administrative Selection
+- *Select job seekers* who pass the administrative stage.
 
-## Contributing
+#### 📌 Interview Selection
+- *Select job seekers* who pass the interview stage from the pool of applicants who passed the administrative selection.
+- Once interview selection is complete, the system will *update the closing date* (tgl_tutup) of the job vacancy.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+---
 
-## Code of Conduct
+## 📐 System Design
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+### *1. Use Case Diagram*
+A *Use Case Diagram* will be designed to represent the interactions between the users (officers) and the system. It will show how the officer will interact with the system for managing job vacancies and performing the selection processes.
 
-## Security Vulnerabilities
+### *2. Sequence Diagram*
+A *Sequence Diagram* will illustrate the sequence of operations and messages exchanged between objects in the system during specific processes like adding a job vacancy, applying for jobs, and conducting selections.
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+### *3. Database Design*
+The system will utilize *MySQL* as the database. The schema will consist of tables to store job vacancy data, applicant information, selection process status, and interview results. An *Entity Relationship Diagram (ERD)* will be developed for better visualization of the relationships between entities.
 
-## License
+### *4. User Interface Design*
+The system will feature a *web-based interface* designed for ease of use by the officers. The interface will include forms for adding/editing job vacancies, viewing applicants, and performing selection tasks.
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
->>>>>>> 1d507ce (first commit)
+---
+
+## ⚙ Implementation
+
+The web-based job vacancy selection system was implemented using the following technologies:
+- *Backend*: PHP (Laravel Framework)
+- *Frontend*: HTML, CSS, JavaScript
+- *Database*: MySQL
+- *Server*: XAMPP (for local development) or any suitable web server for production
+
+The system includes:
+- A *dashboard* to view job vacancies and selection statuses.
+- *Forms* to add, edit, and delete vacancies.
+- *Selection workflows* for administrative and interview selections.
+
+---
+
+## 🧪 Testing
+
+- *Blackbox Testing* was performed to ensure that the system functions according to the requirements without needing to know the internal workings of the system.
+- *Functional Testing* to verify each feature works as expected, from data entry to application submission.
+
+---
+
+## 🛠 Tools & Libraries
+
+The system is developed using the following tools and libraries:
+
+- *Visual Studio Code* - Code editor for development.
+- *XAMPP 3.3.0* - Local server environment for running PHP and MySQL.
+- *PHP 8.0.2* - Programming language used for backend development.
+- *Laravel 9.19* - PHP framework for building the application.
+- *MySQL* - Database for storing data.
+- *MVC Architecture* - For organizing the system structure and separating concerns.
