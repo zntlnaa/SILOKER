@@ -1,0 +1,380 @@
+/*!
+ * Start Bootstrap - SB Admin Bootstrap Admin Template (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+
+/* Global Styles */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+body {
+    margin-top: 100px;
+    background-color: #f5f5f5;
+    padding-bottom: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+#update{
+   
+        margin-top: 100px;
+        background-color: white;
+        font-family: 'Poppins', sans-serif;
+    
+}
+
+
+@media(min-width:768px) {
+    body {
+        margin-top: 50px;
+    }
+}
+
+#wrapper {
+    padding:inherit;
+    margin: 0 auto;
+}
+
+#page-wrapper {
+    width: 100%;
+    padding: 10px;
+    background-color: #fff;
+}
+
+.huge {
+    font-size: 50px;
+    line-height: normal;
+}
+
+@media(min-width:768px) {
+    #wrapper {
+        padding-left: 225px;
+        padding-bottom: 0;
+    }
+
+    #page-wrapper {
+        padding: 10px;
+    }
+}
+
+/* Top Navigation */
+
+.top-nav {
+    padding: 0 15px;
+}
+
+.top-nav>li {
+    display: inline-block;
+    float: left;
+}
+
+.top-nav>li>a {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    line-height: 20px;
+    color: #999;
+}
+
+.top-nav>li>a:hover,
+.top-nav>li>a:focus,
+.top-nav>.open>a,
+.top-nav>.open>a:hover,
+.top-nav>.open>a:focus {
+    color: #fff;
+   
+}
+
+.top-nav>.open>.dropdown-menu {
+    float: left;
+    position: absolute;
+    margin-top: 0;
+
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    background-color: #fff;
+    -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
+    box-shadow: 0 6px 12px rgba(0,0,0,.175);
+}
+
+.top-nav>.open>.dropdown-menu>li>a {
+    white-space: normal;
+}
+
+ul.message-dropdown {
+    padding: 0;
+    max-height: 250px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+li.message-preview {
+    width: 275px;
+    border-bottom: 1px solid rgba(0,0,0,.15);
+}
+
+li.message-preview>a {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+li.message-footer {
+    margin: 5px 0;
+}
+
+ul.alert-dropdown {
+    width: 200px;
+}
+
+/* Side Navigation */
+
+@media(min-width:768px) {
+    .side-nav {
+        position: fixed;
+        top: 51px;
+        left: 0;
+        width: 225px;
+        border: none;
+        border-radius: 0;
+        overflow-y: auto;
+        
+    }
+
+    .side-nav>li>a {
+        width: 225px;
+    }
+
+    .side-nav li a:hover,
+    .side-nav li a:focus {
+        outline: none;
+        background-color: #76b5c5;
+    }
+}
+
+.side-nav>li>ul {
+    padding: 0;
+}
+
+.side-nav>li>ul>li>a {
+    display: block;
+    padding: 10px 15px 10px 38px;
+    text-decoration: none;
+    color: #999;
+}
+
+.side-nav>li>ul>li>a:hover {
+    color: #fff;
+}
+
+/* Flot Chart Containers */
+
+.flot-chart {
+    display: block;
+    height: 400px;
+}
+
+.flot-chart-content {
+    width: 100%;
+    height: 100%;
+}
+
+/* Custom Colored Panels */
+
+.huge {
+    font-size: 40px;
+}
+
+.panel-green {
+    border-color: #5cb85c;
+}
+
+.panel-green .panel-heading {
+    border-color: #5cb85c;
+    color: #fff;
+    background-color: #5cb85c;
+}
+
+.panel-green a {
+    color: #5cb85c;
+}
+
+.panel-green a:hover {
+    color: #3d8b3d;
+}
+
+.panel-red {
+    border-color: #001c40;
+}
+
+.panel-red .panel-heading {
+    border-color: #001c40;
+    color: #fff;
+    background-color: #001c40;
+}
+
+.panel-red a {
+    color: #001c40;
+}
+
+.panel-red a:hover {
+    color: #001c40;
+}
+
+.panel-yellow {
+    border-color: #f0ad4e;
+}
+
+.panel-yellow .panel-heading {
+    border-color: #f0ad4e;
+    color: #fff;
+    background-color: #f0ad4e;
+}
+
+.panel-yellow a {
+    color: #f0ad4e;
+}
+
+.panel-yellow a:hover {
+    color: #df8a13;
+}
+
+.right-container table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+.right-container .label {
+    border: none;
+    background-color: gray ;/* Latar belakang yang menarik */
+    padding: 4px;
+    text-align: right; /* Tanda ":" sejajar ke kanan */
+}
+.right-container .value {
+    border: none;
+    background-color: #ffffff; /* Latar belakang yang menarik */
+    padding: 4px;
+  }
+
+  .right-container {
+    position: relative;
+}
+
+.edit-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+        background-color: #001c40; /* Warna latar belakang */
+        border: none; 
+        border-radius: 5px; /* Border radius 3 */
+        color: white; 
+}
+.detail-loker th,
+.detail-loker td {
+    text-align: left;
+    width: 200px;
+}
+
+/*login1*/
+
+    table {
+        border-collapse: collapse;
+        width: 100%;
+        
+    }
+
+    th, td {
+        text-align: left;
+        padding: 8px;
+    }
+
+    th {
+        background-color: #001c40;
+        color:#ffffff;
+        width: 140px; 
+    }
+
+    /*]\tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }*/
+
+    
+    td {
+        width: 140px;
+    }
+
+    tr:hover {
+        background-color:  #8EBDFA;
+        cursor: pointer;
+    }
+    .form-container1 {
+    display: flex;
+    flex-direction: column;
+    margin-left: 0;
+}
+
+.form-container1 .mb-3 {
+    display: flex;
+    align-items: center;
+    margin-left: 0;
+    margin-bottom: 10px; /* Sesuaikan margin sesuai kebutuhan Anda */
+}
+
+.form-container1 .form-label {
+    flex: 0 0 100px; /* Lebar tetap untuk label (sesuaikan sesuai kebutuhan) */
+    margin-right: 10px; /* Sesuaikan margin sesuai kebutuhan Anda */
+    text-align: left; /* Membuat teks label rata kiri */
+    width: 150px;
+}
+
+/* Menghilangkan tampilan default panah drop-down */
+select.form-select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding: 8px; /* Sesuaikan sesuai kebutuhan */
+    border: 1px solid #ccc; /* Sesuaikan sesuai kebutuhan */
+    border-radius: 4px; /* Sesuaikan sesuai kebutuhan */
+    width: 50%; /* Sesuaikan sesuai kebutuhan */
+    
+  }
+  
+  /* Memberikan tampilan saat digulir */
+  select.form-select:hover {
+    cursor: pointer;
+  }
+  
+  /* Memberikan tampilan saat diberi fokus */
+  select.form-select:focus {
+    outline: none; /* Hilangkan outline default */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Efek bayangan saat fokus */
+  }
+  
+  /* Menyesuaikan tampilan option yang dipilih */
+  select.form-select option:checked {
+    background-color: #001c40; 
+    color: #fff; 
+  }
+
+
+
+  .button-column {
+    display: flex;
+    flex-direction: column;
+    font-size: 15px;
+    flex-direction: column;
+    align-items: center;
+    gap:5px; 
+    justify-content: center;
+    border-radius: 5px;
+    width: 150px;
+    height: 100px;
+    border: 1px solid rgba(0, 0, 0, 0.1); 
+    
+}
+
+.button-column a.active {
+    background-color: #001c40;
+    color: white;
+}
+
+.button-column a.active i {
+    color: white;
+}
